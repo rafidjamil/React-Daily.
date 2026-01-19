@@ -1,0 +1,65 @@
+/* REMOVE default browser spacing */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Navbar full width */
+
+.navbar {
+    width: 100vw;
+    /* force full viewport width */
+    background-color: #0f172a;
+}
+
+
+/* Inner container */
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* center content */
+    padding: 16px 24px;
+}
+
+
+/* Links layout */
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+
+/* Links style */
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 4px;
+    position: relative;
+}
+
+
+/* Hover underline */
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #38bdf8;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
