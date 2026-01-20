@@ -1,0 +1,318 @@
+/* Reset and font */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #f0f4f8;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Navbar */
+
+.navbar {
+    width: 100%;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #f8fafc;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    padding-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+
+/* Hover underline */
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #facc15;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: #facc15;
+}
+
+
+/* Login button */
+
+.login-btn {
+    background: #ffffff;
+    color: #4f46e5 !important;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.login-btn:hover {
+    background: #facc15;
+    color: #1e293b !important;
+}
+
+
+/* PAGE WRAPPERS - LOGIN / ABOUT / HOME */
+
+.page-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 120px;
+    /* leave space for navbar */
+    padding-bottom: 40px;
+    min-height: 100vh;
+}
+
+
+/* Login Card */
+
+.login-wrapper {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.login-card {
+    background: #ffffff;
+    padding: 32px 28px;
+    margin-top: 148px;
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.login-card h2 {
+    text-align: center;
+    margin-bottom: 6px;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+.login-card p {
+    text-align: center;
+    margin-bottom: 26px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #334155;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+}
+
+.extra {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.extra a {
+    color: #6366f1;
+    text-decoration: none;
+    margin: 0 6px;
+}
+
+.extra a:hover {
+    text-decoration: underline;
+}
+
+
+/* About Card */
+
+.about-wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.about-card {
+    background: #ffffff;
+    padding: 36px 28px;
+    margin-top: 152px;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-card h1 {
+    font-size: 32px;
+    margin-bottom: 12px;
+    color: #1e293b;
+    text-align: center;
+}
+
+.about-card h2 {
+    font-size: 22px;
+    margin-top: 24px;
+    margin-bottom: 12px;
+    color: #334155;
+}
+
+.about-card p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #475569;
+    text-align: justify;
+}
+
+.about-card ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: #475569;
+}
+
+.about-card ul li {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+
+/* HOME PAGE */
+
+.home-wrapper {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.home-wrapper h1 {
+    font-size: 36px;
+    color: #1e293b;
+    margin-bottom: 16px;
+}
+
+.home-wrapper p {
+    font-size: 18px;
+    color: #475569;
+    line-height: 1.6;
+}
+
+
+/* User Details Page */
+
+.user-wrapper {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: #f0f4f8;
+}
+
+.user-card {
+    max-width: 500px;
+    width: 100%;
+    background: #ffffff;
+    padding: 32px 28px;
+    border-radius: 14px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.user-card h1 {
+    font-size: 28px;
+    margin-bottom: 24px;
+    color: #1e293b;
+}
+
+.user-info p {
+    font-size: 16px;
+    color: #475569;
+    margin-bottom: 14px;
+    text-align: left;
+}
+
+.user-info p strong {
+    color: #334155;
+}
