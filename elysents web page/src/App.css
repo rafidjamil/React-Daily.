@@ -608,7 +608,7 @@ a {
 h5 {
     font-size: 1.25rem;
     display: flex !important;
-    justify-content: center !important;
+    /* justify-content: center !important; */
 }
 
 .ms-2 {

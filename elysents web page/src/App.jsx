@@ -8,6 +8,7 @@ import MyNavbar from './components/navbar';
 import Footer from './components/footer';
 import { Routes, Route } from 'react-router-dom'
 import Mycataloge from './cataloge';
+import Home from './Home';
 
 import ProductPage from './Productpage'
 import CartModal from './Addtocart';
@@ -19,7 +20,6 @@ import UserProfile from './UserProfile'
 import Beauty from './components/Beauty';
 import ThankYou from './components/Thankyou';
 
-import Home from './Home';
 
 function ColorSchemesExample() {
 
